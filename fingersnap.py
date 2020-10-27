@@ -34,5 +34,17 @@ for i in range(snap_count):
 print(input_li)
 
 
+'''
+위의 풀이의 입력 값이 홀수 일 경우 절반의 확률로 짝수 또는 홀수의 원소가 삭제되지 않는 문제가 발생
+추천 수 많은 풀이.
+import random as rd
+def delete_half(x):
+    rd.shuffle(x)
+    t = len(x)//2
+    if len(x) % 2 and rd.random() < 0.5: t += 1
+    return x[:t]
+'''
+
+
 
 
