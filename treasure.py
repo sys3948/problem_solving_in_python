@@ -20,6 +20,7 @@ N은 50보다 작거나 같은 자연수이고, A와 B의 각 원소는 100보�
 첫째 줄에 S의 최솟값을 출력한다.
 '''
 
+# 처음 풀었던 답(틀린 답)
 input_li = []
 
 num = input('정수 배열의 길이를 입력해주세요.')
@@ -46,5 +47,20 @@ while input_li:
 
     if not input_li[0]:
         break
+
+print(result)
+
+# 맞은 정답. 이해 안감.
+N = int(input())
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+A.sort()
+B.sort(reverse = True)
+
+result = 0
+
+for n,m in zip(A,B):
+    result += n * m
 
 print(result)
